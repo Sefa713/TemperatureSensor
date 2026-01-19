@@ -32,6 +32,7 @@ void loop()
     mylcd.print("It's getting");
     mylcd.setCursor(0,1);  
     mylcd.print("warm!");
+    delay(2000);
   }
   else if (current_temp > 70)  {
     mylcd.clear();
