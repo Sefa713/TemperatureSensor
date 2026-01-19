@@ -37,7 +37,7 @@ void loop()
   float voltage = value*(5.0/1023.0); 
   float current_temp = get_temp(voltage);
   if (10 < current_temp && current_temp <= 40){
-    mylc
+    mylcd.clear();
     mylcd.print("Safe Temp");
     delay(2000);
   }
