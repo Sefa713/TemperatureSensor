@@ -41,6 +41,7 @@ void loop()
     mylcd.print("Levels!");
     digitalWrite(6, HIGH);
     digitalWrite(13, HIGH);
+    delay(200);
     digitalWrite(6, LOW);
     digitalWrite(13, LOW);
     delay(200); 
