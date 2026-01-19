@@ -1,8 +1,7 @@
 // C++ code
 //
 #include <LiquidCrystal.h>
-
- LiquidCrystal mylcd (9,7,8,12,11,10);
+LiquidCrystal mylcd (9,7,8,12,11,10);
 void setup()
 {
   pinMode(13, OUTPUT);
@@ -12,25 +11,11 @@ void setup()
   
 }
 
-float get_temp(float volt){ // opening the temperature function
-  float conv_volt = volt - 0.5;
-  return conv_volt/0.01;
+ float get_temp(float volt){ // opening the temperature function
+ float conv_volt = volt - 0.5;
+ return conv_volt/0.01;
   }// closing the temperature function
 
-void blinking_led(float current_temp){
-  if (current_temp > 40){
-    digitalWrite(13, HIGH);delay(1000);
-    digitalWrite(13, LOW);delay(1000);
-  }
-
-}  
-void vibrating_motor(float current_temp){
-  if (current_temp > 40){
-    digitalWrite(6, HIGH);delay(1000);
-    digitalWrite(6, LOW);delay(1000);
-  }
-
-}
 void loop()
 {
   float value = analogRead(A0);
@@ -54,8 +39,10 @@ void loop()
     mylcd.print("Dangerous Heat");
     mylcd.setCursor(0,1);  
     mylcd.print("Levels!");
-    vibrating_motor(current_temp);
-    blinking_led(current_temp);
+    digitalWrite(6, HIGH);
+    digitalWrite(13, HIGH);
+    digitalWrite(6, LOW);
+    digitalWrite(13, LOW);
     delay(200); 
   }
 }
