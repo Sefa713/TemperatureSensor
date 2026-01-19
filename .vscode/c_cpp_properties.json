@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Users\\nhyir\\Documents\\Arduino\\libraries\\**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "\"C:\\Users\\nhyir\\.arduinoIDE\\arduino-cli.yaml\""
+        }
+    ],
+    "version": 4
+}
